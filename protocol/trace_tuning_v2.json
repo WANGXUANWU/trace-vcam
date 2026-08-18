@@ -1,0 +1,426 @@
+{
+  "schema_version": "trace-tuning/2",
+  "protocol": "widened pilot calibration; selection by subject-balanced validation Huber loss on pilot seeds disjoint from every formal seed",
+  "pilot_seed_base": 991000000,
+  "pilot_seeds_per_setting": 4,
+  "settings": [
+    {
+      "generator": "zw2015",
+      "parameters": {
+        "n_subjects": 100
+      }
+    },
+    {
+      "generator": "zzw2020",
+      "parameters": {
+        "n_subjects": 100,
+        "sigma": 0.4,
+        "error_distribution": "gaussian"
+      }
+    },
+    {
+      "generator": "zzw2020",
+      "parameters": {
+        "n_subjects": 100,
+        "sigma": 0.4,
+        "error_distribution": "hhy-t2"
+      }
+    },
+    {
+      "generator": "zzw2020",
+      "parameters": {
+        "n_subjects": 100,
+        "sigma": 0.4,
+        "error_distribution": "hhy-mixed-normal"
+      }
+    }
+  ],
+  "grid": {
+    "basis": [
+      6,
+      8,
+      10
+    ],
+    "lambda_ratio": [
+      0.01,
+      0.03,
+      0.08,
+      0.15,
+      0.3
+    ],
+    "roughness": [
+      0.0,
+      0.005,
+      0.02,
+      0.05
+    ]
+  },
+  "selected": {
+    "basis": 8,
+    "lambda_ratio": 0.08,
+    "roughness": 0.0
+  },
+  "selected_score": 0.7381832047473051,
+  "ranking": [
+    {
+      "basis": 8,
+      "lambda_ratio": 0.08,
+      "roughness": 0.0,
+      "score": 0.7381832047473051
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.08,
+      "roughness": 0.005,
+      "score": 0.7382092494817527
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.08,
+      "roughness": 0.02,
+      "score": 0.7382799268508045
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.08,
+      "roughness": 0.05,
+      "score": 0.7383804833016233
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.08,
+      "roughness": 0.05,
+      "score": 0.7400068580034131
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.08,
+      "roughness": 0.02,
+      "score": 0.7402875299375538
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.08,
+      "roughness": 0.005,
+      "score": 0.7405819848181695
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.08,
+      "roughness": 0.0,
+      "score": 0.7407160084996874
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.03,
+      "roughness": 0.05,
+      "score": 0.7419862516018081
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.03,
+      "roughness": 0.02,
+      "score": 0.7435652627839243
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.03,
+      "roughness": 0.05,
+      "score": 0.7442751250354752
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.03,
+      "roughness": 0.005,
+      "score": 0.7448725145264606
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.03,
+      "roughness": 0.02,
+      "score": 0.7450116851336239
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.03,
+      "roughness": 0.0,
+      "score": 0.7454531725533631
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.03,
+      "roughness": 0.005,
+      "score": 0.7456588228110541
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.15,
+      "roughness": 0.05,
+      "score": 0.7457930142172482
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.15,
+      "roughness": 0.02,
+      "score": 0.7458921325629162
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.03,
+      "roughness": 0.0,
+      "score": 0.7459732660303394
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.15,
+      "roughness": 0.005,
+      "score": 0.7460067998287657
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.15,
+      "roughness": 0.0,
+      "score": 0.7460583913063887
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.15,
+      "roughness": 0.0,
+      "score": 0.7477171771350442
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.15,
+      "roughness": 0.005,
+      "score": 0.7477275688010465
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.15,
+      "roughness": 0.02,
+      "score": 0.7477545981628813
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.15,
+      "roughness": 0.05,
+      "score": 0.7477951492908335
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.08,
+      "roughness": 0.05,
+      "score": 0.7549447227245766
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.01,
+      "roughness": 0.05,
+      "score": 0.7557689266588599
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.03,
+      "roughness": 0.05,
+      "score": 0.7560315977213816
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.08,
+      "roughness": 0.02,
+      "score": 0.7562218518497013
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.01,
+      "roughness": 0.05,
+      "score": 0.7562256249275816
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.08,
+      "roughness": 0.005,
+      "score": 0.7570222477819704
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.08,
+      "roughness": 0.0,
+      "score": 0.7573216773962616
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.03,
+      "roughness": 0.02,
+      "score": 0.7585130084677121
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.01,
+      "roughness": 0.02,
+      "score": 0.7587052655876183
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.03,
+      "roughness": 0.005,
+      "score": 0.7607652341706252
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.03,
+      "roughness": 0.0,
+      "score": 0.7619850379699954
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.01,
+      "roughness": 0.005,
+      "score": 0.7628805753862831
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.15,
+      "roughness": 0.05,
+      "score": 0.7647623864053934
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.15,
+      "roughness": 0.02,
+      "score": 0.765835998111694
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.3,
+      "roughness": 0.0,
+      "score": 0.766154964316704
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.3,
+      "roughness": 0.005,
+      "score": 0.7662294112470263
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.15,
+      "roughness": 0.005,
+      "score": 0.7664580799470857
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.3,
+      "roughness": 0.02,
+      "score": 0.7664614776201764
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.15,
+      "roughness": 0.0,
+      "score": 0.7666788579332978
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.3,
+      "roughness": 0.05,
+      "score": 0.7669485357835121
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.01,
+      "roughness": 0.02,
+      "score": 0.7673160355317181
+    },
+    {
+      "basis": 6,
+      "lambda_ratio": 0.01,
+      "roughness": 0.0,
+      "score": 0.7673269588269185
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.3,
+      "roughness": 0.05,
+      "score": 0.7785960012462563
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.3,
+      "roughness": 0.02,
+      "score": 0.779206631159127
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.3,
+      "roughness": 0.005,
+      "score": 0.7795424635536385
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.3,
+      "roughness": 0.0,
+      "score": 0.7796600040572939
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.01,
+      "roughness": 0.005,
+      "score": 0.7822921828779081
+    },
+    {
+      "basis": 8,
+      "lambda_ratio": 0.01,
+      "roughness": 0.0,
+      "score": 0.7858607706346787
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.01,
+      "roughness": 0.05,
+      "score": 0.7886085988399582
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.3,
+      "roughness": 0.05,
+      "score": 0.8021824732002946
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.3,
+      "roughness": 0.02,
+      "score": 0.8035680514297094
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.3,
+      "roughness": 0.005,
+      "score": 0.8043231347254806
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.3,
+      "roughness": 0.0,
+      "score": 0.8045845898696716
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.01,
+      "roughness": 0.02,
+      "score": 0.8075715322758478
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.01,
+      "roughness": 0.005,
+      "score": 0.8439086114222961
+    },
+    {
+      "basis": 10,
+      "lambda_ratio": 0.01,
+      "roughness": 0.0,
+      "score": 0.8714025749889792
+    }
+  ]
+}

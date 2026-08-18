@@ -1,0 +1,67 @@
+{
+  "schema_version": "vcam-published-reproduction-targets/1",
+  "targets": {
+    "repro-zw2015-n100": {
+      "method": "ZW2015",
+      "metric": "factor_ise",
+      "statistic": "mean",
+      "reported_value": 0.07290,
+      "reported_replications": 500,
+      "rounding_tolerance": 0.000005,
+      "source": "Zhang and Wang (2015), Biometrika, Table 2, OPT column, MISE(phi,beta)=7.290 x 10^-2",
+      "source_protocol": "n=100, N_i=40, Q=500, full-sample function estimation, paper-optimal knots",
+      "implementation_note": "The CRAN fdapace implementation rejects the paper-optimal knot counts below its spline order; the incompatibility was reproduced directly and is not silently patched.",
+      "source_gate_blocked_reason": "CRAN fdapace 0.6.0 maps the paper's optimal K=(5,2;2,1,1) to negative/too-small interior-knot counts and GenBSpline rejects them. A compatible historical implementation was not available, so that source-value diagnostic is not claimed; the common comparison uses the unmodified public package at its documented feasible defaults."
+    },
+    "repro-zzw2020-n200-sigma0.4": {
+      "method": "ZZW2020",
+      "metric": "noise_free_test_mspe",
+      "statistic": "median",
+      "reported_value": 0.0334,
+      "reported_mad": 0.0102,
+      "reported_replications": 300,
+      "rounding_tolerance": 0.00005,
+      "bootstrap_replications": 4000,
+      "source": "Zhang, Zhong and Wang (2020), CSDA, Table 3, longitudinal Z, Model 1, n=200, sigma=0.4, Proposed",
+      "source_protocol": "80% subjects for fitting and 20% subjects for validation; Q=300; table reports median (MAD)"
+    },
+    "repro-hhy2021-n30-t2": {
+      "method": "HHY2021-Huber",
+      "metric": "paper_observed_factor_mse_total",
+      "statistic": "mean",
+      "reported_value": 0.0469,
+      "reported_replications": 500,
+      "rounding_tolerance": 0.00005,
+      "source": "Hu, Huang and You (2021), official supplement, Table 1, theta=0, 0.5 t(2), Hub: AMSE(alpha0)=0.0116, AMSE(alpha1)=0.0178, AMSE(beta1)=0.0175; registered total=0.0469",
+      "source_protocol": "n=30, m=20, full-sample three-stage Huber fit, Q=500; aggregate is the exact sum of the three displayed AMSE entries"
+    },
+    "repro-zsy2026-n50-p10-sigma0.1": {
+      "method": "ZSY2026-author-code",
+      "metric": "paper_training_function_mse_total",
+      "statistic": "mean",
+      "reported_value": 30.0234,
+      "reported_replications": 100,
+      "rounding_tolerance": 0.00005,
+      "source": "Zhao, Sun and Yang (2026), Table 9, Example 4, d=10, n=50, sigma=0.1, Proposed; beta-function sum 27.2968 plus phi-function sum 2.7266",
+      "source_protocol": "80% subjects used for author-code training; Q=100; target is a paper training-function MSE total, not factor ISE and not held-out MSPE",
+      "capability_note": "Pinned author code has no out-of-sample predict method; held-out MSPE is N/A by capability.",
+      "reported_components": {
+        "beta0": 27.2092,
+        "beta1_to_beta10": [0.0069, 0.0086, 0.0088, 0.0081, 0.0089, 0.0082, 0.0095, 0.0093, 0.0081, 0.0112],
+        "phi1_to_phi10": [0.2752, 0.2718, 0.2810, 0.2798, 0.2781, 0.2726, 0.2669, 0.2665, 0.2688, 0.2659]
+      }
+    },
+    "ZY2025-table1-n200-sigma0.1": {
+      "method": "ZY2025-paper-implementation",
+      "metric": "noise_free_test_mspe",
+      "statistic": "mean",
+      "reported_value": 0.0575,
+      "reported_sd": 0.0376,
+      "reported_replications": 300,
+      "rounding_tolerance": 0.00005,
+      "source": "Zhao and Yang (2025), Table 1, Proposed method, n=200, sigma=0.1",
+      "source_protocol": "80% subjects for training and 20% subjects for testing; Q=300; paper implementation, not author code. Although the displayed formula uses y, the reported values are only compatible with prediction of the noise-free regression function because new-subject W variance alone is much larger than the tabled MSPE.",
+      "source_gate_blocked_reason": "The printed Example 4.1 additive-function centering constants (0.4 and 2) do not center the stated spline combinations under the registered open cubic B-spline convention. The literal design is run only as a sensitivity; no numerically re-centered ZZW2020 proxy may be used for admission."
+    }
+  }
+}
