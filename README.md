@@ -24,7 +24,7 @@ Because the pilot is convex, the matrix that the projection acts on is a global 
 Python 3.10 or later.
 
 ```bash
-git clone https://github.com/OWNER/trace-vcam.git
+git clone https://github.com/WANGXUANWU/trace-vcam.git
 cd trace-vcam
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
