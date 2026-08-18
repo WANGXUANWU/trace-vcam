@@ -1,0 +1,8 @@
+R==4.6.1
+catdata==1.2.5
+data.table==1.18.4
+fdapace==0.6.0
+glmnet==5.0
+jsonlite==2.0.0
+splines2==0.5.4
+
